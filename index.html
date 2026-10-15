@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Desconto por Faixa</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculadora">
+        <h1>🛍️ Calculadora de Desconto</h1>
+        <p class="subtitulo">Desconto automático baseado no valor da compra</p>
+
+        <div class="campo">
+            <label for="preco">Valor da compra (R$)</label>
+            <input type="number" id="preco" placeholder="Ex: 250.00" step="0.01" min="0">
+        </div>
+
+        <button onclick="calcular()">Calcular Desconto</button>
+
+        <div class="resultado" id="resultado">
+            <div class="faixa" id="faixa">Faixa aplicada</div>
+            <div class="linha">
+                <span>Valor da compra:</span>
+                <span id="valorOriginal">R$ 0,00</span>
+            </div>
+            <div class="linha">
+                <span>Percentual de desconto:</span>
+                <span id="percentual">0%</span>
+            </div>
+            <div class="linha economia">
+                <span>Você economiza:</span>
+                <span id="economia">R$ 0,00</span>
+            </div>
+            <div class="linha total">
+                <span>Total a pagar:</span>
+                <span id="totalFinal">R$ 0,00</span>
+            </div>
+        </div>
+
+        <div class="tabela-faixas">
+            <strong>Regras de desconto:</strong><br>
+            • Até R$ 99,99: sem desconto<br>
+            • De R$ 100 a R$ 499,99: 5% de desconto<br>
+            • R$ 500 ou mais: 10% de desconto
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JS -->
+    <script src="script.js"></script>
+</body>
+</html>
